@@ -132,7 +132,10 @@
                                   <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="btBuscar" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="Consulta" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btBuscar" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="btModificar" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -159,6 +162,8 @@
                       <Component id="btModificar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="btBuscar" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="Consulta" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -211,6 +216,14 @@
         <Component class="javax.swing.JButton" name="btEliminar">
           <Properties>
             <Property name="text" type="java.lang.String" value="Eliminar"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JButton" name="Consulta">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Consulta"/>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

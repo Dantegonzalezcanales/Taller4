@@ -62,4 +62,34 @@ public class ModeloVideo extends Conexion {
         }
         return tablemodel;
     }
+     //Modificar producto seleccionado
+    public boolean modificaProducto( int codigo,String nombre, String categoria , String formato, int precio ){
+        String q= "UPDATE videobuster.pelicula SET nombre='"+nombre+"', categoria='"+categoria+"' , formato='"+formato+"', precio='"+precio+"' "
+                + " WHERE codigo='"+codigo+"' ";
+        try {
+            PreparedStatement pstm = this.getConexion().prepareStatement(q);
+            pstm.execute();
+            pstm.close();
+            return true;
+         }catch(SQLException e){
+            System.err.println( e.getMessage() );
+        }
+        return false;
+    }
+    
+     //Elimina producto
+    public boolean eliminarProducto(int codigo){
+        boolean res=false;
+        String q = " DELETE FROM videobuster.pelicula WHERE codigo=" + codigo + " " ;
+        try {
+            PreparedStatement pstm = this.getConexion().prepareStatement(q);
+            pstm.execute();
+            pstm.close();
+            res=true;
+         }catch(SQLException e){
+            System.err.println( e.getMessage() );
+        }
+        return res;
+    }
+
 }

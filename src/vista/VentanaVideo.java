@@ -34,6 +34,7 @@ public class VentanaVideo extends javax.swing.JFrame {
         txtCod_Edit = new javax.swing.JTextField();
         btBuscar = new javax.swing.JButton();
         btEliminar = new javax.swing.JButton();
+        Consulta = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableVideo = new javax.swing.JTable();
@@ -67,6 +68,8 @@ public class VentanaVideo extends javax.swing.JFrame {
 
         btEliminar.setText("Eliminar");
 
+        Consulta.setText("Consulta");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -87,7 +90,9 @@ public class VentanaVideo extends javax.swing.JFrame {
                                 .addComponent(btEliminar)
                                 .addGap(2, 2, 2))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(btBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(Consulta)
+                                    .addComponent(btBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addComponent(btModificar)))))
                 .addContainerGap())
@@ -106,6 +111,8 @@ public class VentanaVideo extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btModificar)
                     .addComponent(btBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Consulta)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -258,6 +265,7 @@ public class VentanaVideo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton Consulta;
     public javax.swing.JButton btBuscar;
     public javax.swing.JButton btEliminar;
     public javax.swing.JButton btGrabar;
