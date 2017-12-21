@@ -28,24 +28,40 @@ public class Consulta extends javax.swing.JFrame {
     private void initComponents() {
 
         Volver = new javax.swing.JButton();
+        btConsulta1 = new javax.swing.JButton();
+        btConsulta2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Volver.setText("Volver");
+
+        btConsulta1.setText("Consulta1");
+
+        btConsulta2.setText("Consulta2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(310, Short.MAX_VALUE)
+                .addContainerGap(490, Short.MAX_VALUE)
                 .addComponent(Volver)
                 .addGap(27, 27, 27))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(96, 96, 96)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btConsulta2)
+                    .addComponent(btConsulta1))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(230, Short.MAX_VALUE)
+                .addGap(66, 66, 66)
+                .addComponent(btConsulta1)
+                .addGap(43, 43, 43)
+                .addComponent(btConsulta2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 238, Short.MAX_VALUE)
                 .addComponent(Volver)
                 .addGap(47, 47, 47))
         );
@@ -90,5 +106,7 @@ public class Consulta extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton Volver;
+    public javax.swing.JButton btConsulta1;
+    public javax.swing.JButton btConsulta2;
     // End of variables declaration//GEN-END:variables
 }

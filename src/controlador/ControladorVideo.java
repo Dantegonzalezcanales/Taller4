@@ -18,6 +18,7 @@ public class ControladorVideo implements ActionListener{
     
     //Declaro objeto modelo
     private ModeloVideo modelo = new ModeloVideo();
+    private Consulta vistaConsulta;
     
     //Declaro botón que está en la vista ingresa el dato
     public enum Accion{
@@ -27,15 +28,18 @@ public class ControladorVideo implements ActionListener{
         btModificar,
         btEliminar,
         Consulta,
-        Volver
+        Volver,
+        btConsulta1,
+        btConsulta2
         
     
     }
     //Constructor 
     public ControladorVideo (VentanaVideo vistaVentanaVideo){
         this.vistaVentanaVideo = vistaVentanaVideo;
-        
+      
     }
+  
     
     public void iniciar(){
         try {
@@ -49,7 +53,7 @@ public class ControladorVideo implements ActionListener{
           catch (InstantiationException ex) {}
           catch (IllegalAccessException ex) {}
         
-        //Escuchamos los botones de todas partes
+        //Escuchamos los botones de todas partes        
         this.vistaVentanaVideo.btGrabar.setActionCommand( "btGrabar" );
         this.vistaVentanaVideo.btGrabar.addActionListener(this);
         this.vistaVentanaVideo.btMostrar.setActionCommand( "btnMostrar" );
@@ -62,6 +66,10 @@ public class ControladorVideo implements ActionListener{
         this.VistaConsulta.Volver.addActionListener(this);
           this.vistaVentanaVideo.btEliminar.setActionCommand( "btEliminar" );
         this.vistaVentanaVideo.btEliminar.addActionListener(this);
+        this.VistaConsulta.btConsulta1.setActionCommand( "btConsulta1" );
+       this.VistaConsulta.btConsulta1.addActionListener(this);
+          this.VistaConsulta.btConsulta2.setActionCommand( "btConsulta2" );
+        this.VistaConsulta.btConsulta2.addActionListener(this);
         
         }
     
@@ -102,14 +110,36 @@ public class ControladorVideo implements ActionListener{
                   case Volver:
                       this.VistaConsulta.setVisible(false);
                   this.vistaVentanaVideo.setVisible(true);
-                        
+                        break;
                     
-                  break;
+                
                   
                   case btEliminar:
                     int codigo1;
                     codigo1 = Integer.parseInt(this.vistaVentanaVideo.txtCodigo.getText());
                     this.modelo.eliminarProducto(codigo1);
+                    break;
+                    
+                  case btConsulta1:
+                      if(this.modelo.agregaDato(10006,"Me Caso","Drama","4k",6400)){
+                        JOptionPane.showMessageDialog(null, "El dato fue agregado");
+       
+                   
+
+
+                }else{
+                    JOptionPane.showMessageDialog(null, "No se pudo agregar");}
+                    break;
+                    
+                    case btConsulta2:
+                      if(this.modelo.agregaDato(10007,"La Mascara","Comedia","Full HD",7200)){
+                        JOptionPane.showMessageDialog(null, "El dato fue agregado");
+       
+                   
+
+
+                }else{
+                    JOptionPane.showMessageDialog(null, "No se pudo agregar");}
                     break;
                     
               case btModificar:
