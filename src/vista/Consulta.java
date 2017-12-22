@@ -34,6 +34,10 @@ public class Consulta extends javax.swing.JFrame {
         Volver = new javax.swing.JButton();
         btConsulta1 = new javax.swing.JButton();
         btConsulta2 = new javax.swing.JButton();
+        btConsulta3 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,35 +47,70 @@ public class Consulta extends javax.swing.JFrame {
 
         btConsulta2.setText("Consulta2");
 
+        btConsulta3.setText("Consulta3");
+        btConsulta3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btConsulta3ActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Ingresar un registro a la tabla de película, considere la categoría drama.");
+
+        jLabel2.setText("Ingresar un registro a la tabla de película, considere la categoría como comedia.");
+
+        jLabel3.setText("Limpiar casillas y dejar el cursor en  la primera casilla para el ingreso de un código.");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(490, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Volver)
                 .addGap(27, 27, 27))
             .addGroup(layout.createSequentialGroup()
                 .addGap(96, 96, 96)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btConsulta1)
-                    .addComponent(btConsulta2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btConsulta3)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btConsulta1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btConsulta2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel2)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(66, 66, 66)
-                .addComponent(btConsulta1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btConsulta1)
+                    .addComponent(jLabel1))
                 .addGap(43, 43, 43)
-                .addComponent(btConsulta2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 238, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btConsulta2)
+                    .addComponent(jLabel2))
+                .addGap(44, 44, 44)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btConsulta3)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 171, Short.MAX_VALUE)
                 .addComponent(Volver)
                 .addGap(47, 47, 47))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btConsulta3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsulta3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btConsulta3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -112,6 +151,10 @@ public class Consulta extends javax.swing.JFrame {
     public javax.swing.JButton Volver;
     public javax.swing.JButton btConsulta1;
     public javax.swing.JButton btConsulta2;
+    public javax.swing.JButton btConsulta3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 
     public class table {

@@ -31,7 +31,7 @@ public class ControladorVideo implements ActionListener{
         Volver,
         btConsulta1,
         btConsulta2,
-        btConsulta4,
+        btConsulta3,
         
     
     }
@@ -71,12 +71,13 @@ public class ControladorVideo implements ActionListener{
        this.VistaConsulta.btConsulta1.addActionListener(this);
           this.VistaConsulta.btConsulta2.setActionCommand( "btConsulta2" );
         this.VistaConsulta.btConsulta2.addActionListener(this);
-       
-        
+        this.VistaConsulta.btConsulta3.setActionCommand( "btConsulta3" );
+        this.VistaConsulta.btConsulta3.addActionListener(this);
         }
     
     @Override
     public void actionPerformed(ActionEvent e) {
+        
     switch (Accion.valueOf(e.getActionCommand())){  
             case btGrabar:
                 if(this.modelo.agregaDato(Integer.parseInt(this.vistaVentanaVideo.txtCodigo.getText()),
@@ -103,14 +104,6 @@ public class ControladorVideo implements ActionListener{
                 this.vistaVentanaVideo.setVisible(true);
                 this.vistaVentanaVideo.tableVideo.setModel(this.modelo.ListadoProducto());
                 break;
-            case btConsulta4:
-                this.vistaVentanaVideo.setVisible(true);
-                this.VistaConsulta.setVisible(true);
-                this.vistaConsulta.setLocationRelativeTo(null);
-                this.vistaConsulta.setTitle("VideoBuster");
-                this.vistaConsulta.setVisible(true);
-                this.vistaVentanaVideo.tableVideo.setModel(this.modelo.ListadoProducto());
-             break;
                 
               case Consulta:
                   this.VistaConsulta.setVisible(true);
@@ -133,9 +126,7 @@ public class ControladorVideo implements ActionListener{
                   case btConsulta1:
                       if(this.modelo.agregaDato(10006,"Me Caso","Drama","4k",6400)){
                         JOptionPane.showMessageDialog(null, "El dato fue agregado");
-       
-                   
-
+                         
 
                 }else{
                     JOptionPane.showMessageDialog(null, "No se pudo agregar");}
@@ -144,13 +135,24 @@ public class ControladorVideo implements ActionListener{
                     case btConsulta2:
                       if(this.modelo.agregaDato(10007,"La Mascara","Comedia","Full HD",7200)){
                         JOptionPane.showMessageDialog(null, "El dato fue agregado");
-       
-                   
-
+          
 
                 }else{
                     JOptionPane.showMessageDialog(null, "No se pudo agregar");}
                     break;
+                    
+                    
+                    case btConsulta3:
+                    //Limpiamos 
+                    this.vistaVentanaVideo.txtCodigo.setText("");
+                    this.vistaVentanaVideo.txtNombre.setText("");
+                    this.vistaVentanaVideo.cmbCategoria.setSelectedIndex(0);
+                    this.vistaVentanaVideo.txtFormato.setText("");
+                    this.vistaVentanaVideo.txtPrecio.setText("");
+                    JOptionPane.showMessageDialog(null, "Las celdas fueron limpiadas");
+                    this.vistaVentanaVideo.txtCodigo.requestFocus();
+                    break;
+
                     
               case btModificar:
                                   if(this.modelo.modificaProducto(Integer.parseInt(this.vistaVentanaVideo.txtCodigo.getText()),
