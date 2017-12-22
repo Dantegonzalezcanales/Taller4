@@ -34,7 +34,6 @@ public class Consulta extends javax.swing.JFrame {
         Volver = new javax.swing.JButton();
         btConsulta1 = new javax.swing.JButton();
         btConsulta2 = new javax.swing.JButton();
-        btConsulta4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,8 +42,6 @@ public class Consulta extends javax.swing.JFrame {
         btConsulta1.setText("Consulta1");
 
         btConsulta2.setText("Consulta2");
-
-        btConsulta4.setText("Consulta4");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -57,20 +54,15 @@ public class Consulta extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(96, 96, 96)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btConsulta2)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btConsulta1)
-                        .addGap(39, 39, 39)
-                        .addComponent(btConsulta4)))
+                    .addComponent(btConsulta1)
+                    .addComponent(btConsulta2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(66, 66, 66)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btConsulta1)
-                    .addComponent(btConsulta4))
+                .addComponent(btConsulta1)
                 .addGap(43, 43, 43)
                 .addComponent(btConsulta2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 238, Short.MAX_VALUE)
@@ -120,7 +112,6 @@ public class Consulta extends javax.swing.JFrame {
     public javax.swing.JButton Volver;
     public javax.swing.JButton btConsulta1;
     public javax.swing.JButton btConsulta2;
-    public javax.swing.JButton btConsulta4;
     // End of variables declaration//GEN-END:variables
 
     public class table {
@@ -130,4 +121,12 @@ public class Consulta extends javax.swing.JFrame {
         public table() {
         }
     }
-}
+
+    public class btConsulta4 {
+
+      
+        }
+
+       
+        }
+/*}}*/

@@ -30,7 +30,8 @@ public class ControladorVideo implements ActionListener{
         Consulta,
         Volver,
         btConsulta1,
-        btConsulta2
+        btConsulta2,
+        btConsulta4,
         
     
     }
@@ -70,6 +71,7 @@ public class ControladorVideo implements ActionListener{
        this.VistaConsulta.btConsulta1.addActionListener(this);
           this.VistaConsulta.btConsulta2.setActionCommand( "btConsulta2" );
         this.VistaConsulta.btConsulta2.addActionListener(this);
+       
         
         }
     
@@ -101,6 +103,14 @@ public class ControladorVideo implements ActionListener{
                 this.vistaVentanaVideo.setVisible(true);
                 this.vistaVentanaVideo.tableVideo.setModel(this.modelo.ListadoProducto());
                 break;
+            case btConsulta4:
+                this.vistaVentanaVideo.setVisible(true);
+                this.VistaConsulta.setVisible(true);
+                this.vistaConsulta.setLocationRelativeTo(null);
+                this.vistaConsulta.setTitle("VideoBuster");
+                this.vistaConsulta.setVisible(true);
+                this.vistaVentanaVideo.tableVideo.setModel(this.modelo.ListadoProducto());
+             break;
                 
               case Consulta:
                   this.VistaConsulta.setVisible(true);
