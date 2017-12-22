@@ -11,6 +11,8 @@ package vista;
  */
 public class VentanaVideo extends javax.swing.JFrame {
 
+    public Object tableModel;
+
     /**
      * Creates new form VentanaVideo
      */
@@ -147,7 +149,7 @@ public class VentanaVideo extends javax.swing.JFrame {
 
         btGrabar.setText("Agregar");
 
-        cmbCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Categoria:", "Accion", "Drama", "Infantil", "Suspenso", "Terror" }));
+        cmbCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Categoria:", "Accion", "Drama", "Infantil", "Suspenso", "Terror", "Romance" }));
         cmbCategoria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmbCategoriaActionPerformed(evt);
@@ -289,4 +291,10 @@ public class VentanaVideo extends javax.swing.JFrame {
     public javax.swing.JTextField txtNombre;
     public javax.swing.JTextField txtPrecio;
     // End of variables declaration//GEN-END:variables
+
+    public class tableModel {
+
+        public tableModel() {
+        }
+    }
 }
